@@ -1,0 +1,12 @@
+{
+	"dependencies": {
+		"vitest": "^0.22.1"
+	},
+	"name": "tiny-compiler",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "vitest"
+	},
+	"license": "ISC"
+}
