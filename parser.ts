@@ -1,13 +1,14 @@
 import { Token, TokenType } from "./tokenizer";
 
 export enum NodeType {
-	Program,
-	CallExpression,
-	NumberLiteral,
+	Program = "Program",
+	CallExpression = "CallExpression",
+	NumberLiteral = "NumberLiteral",
 }
 
 export interface Node {
 	type: NodeType;
+	context?: any[];
 }
 
 export type ChildNode = CallNode | NumNode;
@@ -15,6 +16,7 @@ export type ChildNode = CallNode | NumNode;
 export interface CallNode extends Node {
 	name: string;
 	params: ChildNode[];
+	context?: any[];
 }
 
 export interface NumNode extends Node {
